@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-mint: #FF7A00;
+
+  --color-emerald-50: #fff8f2;
+  --color-emerald-100: #ffecd6;
+  --color-emerald-200: #ffd4a8;
+  --color-emerald-300: #ffb570;
+  --color-emerald-400: #ff8c33;
+  --color-emerald-500: #ff7000;
+  --color-emerald-600: #e65c00;
+  --color-emerald-700: #cc4d00;
+  --color-emerald-750: #b33e00;
+  --color-emerald-800: #993000;
+  --color-emerald-850: #802300;
+  --color-emerald-900: #661600;
+  --color-emerald-950: #4d0b00;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-slate-950, #0a0f1d);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-800, #1e293b);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF7A00;
+}
+
+@media (pointer: fine) {
+  html, button, a, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 122, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.glass-panel-light {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 122, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(255, 122, 0, 0.05);
+}
+
+/* Base scroll snap behavior */
+html {
+  scroll-behavior: smooth;
+}
