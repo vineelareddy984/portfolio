@@ -110,39 +110,33 @@ export default function ExperienceCertifications({ isDarkMode }: ExperienceCerti
             <div className="relative pl-6 md:pl-8 border-l border-emerald-500/15 space-y-6">
               
               {CERTIFICATIONS.map((cert) => {
-                // Style icon based on certification type
-                const isWinner = cert.title.includes(' runner') || cert.title.includes('Certification') || cert.title.includes('First');
                 return (
                   <div 
                     key={cert.id}
-                    className="relative group"
+                    className="relative group cursor-pointer"
                   >
-                    {/* Pulsing point node */}
+                    {/* Unified point node */}
                     <div className="absolute -left-[31px] md:-left-[39px] top-1.5 flex items-center justify-center">
-                      <div className={`w-3.5 h-3.5 rounded-full border transition-transform duration-300 group-hover:scale-130 flex items-center justify-center ${
-                        isWinner 
-                          ? isDarkMode
-                            ? 'bg-[#FF7A00] border-[#FF7A00]'
-                            : 'bg-emerald-500 border-emerald-500'
-                          : isDarkMode
-                            ? 'bg-slate-950 border-emerald-500'
-                            : 'bg-white border-emerald-500'
+                      <div className={`w-3.5 h-3.5 rounded-full border transition-all duration-300 group-hover:scale-130 flex items-center justify-center ${
+                        isDarkMode
+                          ? 'bg-slate-950 border-[#FF7A00] group-hover:bg-[#FF7A00]/20'
+                          : 'bg-white border-[#FF7A00] group-hover:bg-[#FF7A00]/10'
                       }`}>
-                        <div className={`w-1 h-1 rounded-full ${isDarkMode ? 'bg-slate-950' : 'bg-emerald-800'}`} />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#FF7A00]" />
                       </div>
                     </div>
 
                     {/* Timeline card block */}
-                    <div className={`p-4 rounded-xl border transition-all duration-300 hover:translate-x-1.5 ${
+                    <div className={`p-4 rounded-xl border transition-all duration-300 hover:translate-x-2 ${
                       isDarkMode 
-                        ? 'bg-slate-900/30 border-white/5 hover:border-[#FF7A00]/15' 
-                        : 'bg-white border-slate-100 hover:border-emerald-300 hover:shadow shadow-zinc-200/50'
+                        ? 'bg-slate-900/30 border-white/5 hover:bg-[#FF7A00]/5 hover:border-[#FF7A00]/40 hover:shadow-[0_0_20px_rgba(255,122,0,0.12)]' 
+                        : 'bg-white border-slate-100 hover:bg-orange-50/10 hover:border-[#FF7A00]/40 hover:shadow-[0_8px_30px_rgb(255,122,0,0.06)]'
                     }`}>
                       <div className="flex items-center justify-between gap-2">
                         <span className={`text-[10px] font-mono font-bold tracking-wider uppercase px-1.5 py-0.5 rounded border ${
                           isDarkMode
-                            ? 'text-emerald-400 bg-emerald-950/20 border-emerald-500/10'
-                            : 'text-emerald-800 bg-emerald-50 border-emerald-300/30'
+                            ? 'text-emerald-400 bg-emerald-950/20 border-emerald-500/10 group-hover:text-[#FF7A00]'
+                            : 'text-emerald-800 bg-emerald-50 border-emerald-300/30 group-hover:text-[#FF7A00]'
                         }`}>
                           {cert.type}
                         </span>
@@ -152,7 +146,7 @@ export default function ExperienceCertifications({ isDarkMode }: ExperienceCerti
                       </div>
 
                       <h4 className={`text-xs md:text-sm font-bold font-display mt-2 transition-colors ${
-                        isDarkMode ? 'text-white group-hover:text-[#FF7A00]' : 'text-slate-800 group-hover:text-emerald-700'
+                        isDarkMode ? 'text-white group-hover:text-[#FF7A00]' : 'text-slate-800 group-hover:text-[#FF7A00]'
                       }`}>
                         {cert.title}
                       </h4>

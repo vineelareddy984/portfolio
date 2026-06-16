@@ -63,27 +63,30 @@ export default function CustomCursor() {
       {/* Outer Glowing Circle */}
       <div
         id="custom-cursor-glow"
-        className="pointer-events-none fixed z-[9999] rounded-full -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:block"
+        className="pointer-events-none fixed z-[9999] rounded-full hidden md:block"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
           width: clicked ? '28px' : hovered ? '48px' : '32px',
           height: clicked ? '28px' : hovered ? '48px' : '32px',
+          transform: 'translate(-50%, -50%)',
           border: '1.5px solid #FF7A00',
           backgroundColor: hovered ? 'rgba(255, 122, 0, 0.15)' : 'rgba(255, 122, 0, 0.02)',
           boxShadow: hovered 
             ? '0 0 20px rgba(255, 122, 0, 0.6), inset 0 0 10px rgba(255, 122, 0, 0.3)' 
             : '0 0 10px rgba(255, 122, 0, 0.2)',
+          transition: 'width 150ms cubic-bezier(0.16, 1, 0.3, 1), height 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease-out, border-color 150ms ease-out, box-shadow 150ms ease-out',
         }}
       />
       {/* Solid Inner Dot */}
       <div
         id="custom-cursor-dot"
-        className="pointer-events-none fixed z-[9999] w-2 h-2 bg-[#FF7A00] rounded-full -translate-x-1/2 -translate-y-1/2 transition-transform duration-75 ease-out hidden md:block"
+        className="pointer-events-none fixed z-[9999] w-2 h-2 bg-[#FF7A00] rounded-full hidden md:block"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
           transform: `translate(-50%, -50%) scale(${clicked ? 0.6 : hovered ? 1.4 : 1})`,
+          transition: 'transform 100ms cubic-bezier(0.16, 1, 0.3, 1)',
           boxShadow: '0 0 8px #FF7A00',
         }}
       />
