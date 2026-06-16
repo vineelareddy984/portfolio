@@ -155,47 +155,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Sliding Fixed Left Side Social Media Rail */}
-      <div className="hidden lg:flex flex-col space-y-4 fixed bottom-12 left-10 z-30">
-        <a
-          href={PERSONAL_INFO.linkedin}
-          target="_blank"
-          rel="noreferrer"
-          className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 hover:-translate-y-1 active:scale-95 shadow-md ${
-            isDarkMode
-              ? 'bg-slate-900 border-white/10 text-slate-300 hover:text-[#FF7A00] hover:bg-[#FF7A00]/10 hover:border-[#FF7A00]/30 shadow-black/40'
-              : 'bg-white border-emerald-100 text-slate-705 hover:text-emerald-700 hover:bg-[#FF7A00]/10 hover:border-emerald-300 shadow-emerald-100/20'
-          }`}
-          aria-label="Visit LinkedIn profile"
-        >
-          <Linkedin size={16} />
-        </a>
-        <a
-          href={PERSONAL_INFO.github}
-          target="_blank"
-          rel="noreferrer"
-          className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 hover:-translate-y-1 active:scale-95 shadow-md ${
-            isDarkMode
-              ? 'bg-slate-900 border-white/10 text-slate-300 hover:text-[#FF7A00] hover:bg-[#FF7A00]/10 hover:border-[#FF7A00]/30 shadow-black/40'
-              : 'bg-white border-emerald-100 text-slate-705 hover:text-emerald-700 hover:bg-[#FF7A00]/10 hover:border-emerald-300 shadow-emerald-100/20'
-          }`}
-          aria-label="Visit GitHub profile"
-        >
-          <Github size={16} />
-        </a>
-        <a
-          href={`mailto:${PERSONAL_INFO.email}`}
-          className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 hover:-translate-y-1 active:scale-95 shadow-md ${
-            isDarkMode
-              ? 'bg-slate-900 border-white/10 text-slate-300 hover:text-[#FF7A00] hover:bg-[#FF7A00]/10 hover:border-[#FF7A00]/30 shadow-black/40'
-              : 'bg-white border-emerald-100 text-slate-705 hover:text-emerald-700 hover:bg-[#FF7A00]/10 hover:border-emerald-300 shadow-emerald-100/20'
-          }`}
-          aria-label="Send direct message email"
-        >
-          <Mail size={16} />
-        </a>
-        <div className={`w-[1.5px] h-20 mx-auto ${isDarkMode ? 'bg-white/10' : 'bg-emerald-100'}`} />
-      </div>
+
 
       {/* Floating Back To Top button (Slide up-down) */}
       <button
