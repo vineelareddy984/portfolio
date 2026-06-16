@@ -91,16 +91,6 @@ export default function ExperienceCertifications({ isDarkMode }: ExperienceCerti
                 </div>
               ))}
             </div>
-            
-            {/* Seeking message indicator */}
-            <div className={`p-4 rounded-xl border flex items-center space-x-3.5 ${
-              isDarkMode ? 'bg-slate-900/30 border-white/5' : 'bg-white border-slate-200 shadow-sm'
-            }`}>
-              <div className={`w-2.5 h-2.5 rounded-full animate-ping ${isDarkMode ? 'bg-[#FF7A00]' : 'bg-emerald-500'}`} />
-              <p className={`text-xs leading-relaxed font-sans font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                Actively interviewing for Fall 2026 / 2027 Software Engineer internships and full-time pipelines. Let's schedule a talk!
-              </p>
-            </div>
           </div>
 
           {/* Right Column: Certifications Timeline */}

@@ -42,13 +42,6 @@ export default function Hero({ isDarkMode }: HeroProps) {
           
           {/* Text Content Block */}
           <div className="lg:col-span-7 flex flex-col justify-center space-y-6 text-center lg:text-left order-2 lg:order-1">
-            <span className={`inline-flex items-center self-center lg:self-start px-3 py-1 text-xs font-bold font-display rounded-full transition-all ${
-              isDarkMode 
-                ? 'bg-[#FF7A00]/10 text-[#FF7A00] ring-1 ring-[#FF7A00]/20' 
-                : 'bg-emerald-50 text-emerald-800 ring-1 ring-emerald-250/20'
-            }`}>
-              ⚡ Available for Internships & Full-time Roles
-            </span>
             
             <div className="space-y-3">
               <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold font-display tracking-tight leading-none ${
